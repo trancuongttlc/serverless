@@ -20,11 +20,11 @@ provider:
             - "dynamodb:DeleteItem"
           Resource: arn:aws:dynamodb:${aws:region}:${aws:accountId}:table/${self:service}-userTable-${sls:stage}
   environment:
-    DYNAMODB_USER_TABLE: ${self:service}-userTable-${sls:stage}
+    USER_TABLE: ${self:service}-userTable-${sls:stage}
 
 functions:
   api:
-    handler: src/app.handler
+    handler: index.appHandler
     events:
       - httpApi: "*"
 

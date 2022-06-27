@@ -1,3 +1,27 @@
+// {
+//   "compilerOptions": {
+//     "target": "es6",
+//     "module": "commonjs",
+//     "lib": ["es2015", "es2016", "dom", "es2017", "es6", "es5"],
+//     "esModuleInterop": true,
+//     "noImplicitThis": true,
+//     "moduleResolution": "node",
+//     "sourceMap": true,
+//     "outDir": "dist",
+//     "baseUrl": "./",
+//     "emitDecoratorMetadata": true,
+//     "experimentalDecorators": true,
+//     "paths": {
+//       "@src/*": ["src/*"],
+//       "@enums/*": ["src/enums/*"],
+//       "@controllers/*": ["src/controllers/*"]
+//     },
+//     "removeComments": true
+//   },
+//   "include": ["src/**/*.ts", "src/**/*.xml", "src/**/*.html"],
+//   "exclude": ["node_modules", "dist"]
+// }
+
 {
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
@@ -17,5 +41,6 @@
       "@src/*": ["src/*"]
     }
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules"]
 }
+

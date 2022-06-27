@@ -2,17 +2,20 @@ import serverless from "serverless-http";
 import express from "express";
 import { json, urlencoded } from "body-parser";
 import cors from "cors";
+import 'reflect-metadata';
+import * as controllers from "./controllers";
 
-import routes from './user/routes'
+const routes = Object.values(controllers);
+// import routess from './user/routes'
 const app = express();
 
 app.use(cors({ origin: true }));
 app.use(json());
 app.use(urlencoded({ extended: true }));
-app.use('/user', routes);
+// app.use("/user", routes);
 
-const server = serverless(app);
+routes.forEach((route) => {
+  app.use("/api", route);
+});
 
-export async function handler(context, req) {
-  context.res = await server(context, req);
-}
+export default serverless(app);
