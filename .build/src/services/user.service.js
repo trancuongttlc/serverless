@@ -19,8 +19,9 @@ let UserService = class UserService {
     constructor() {
         this.db = new db_helper_1.default();
     }
-    async getListUser() {
-        return await this.db.list(process.env.USER_TABLE);
+    async getListUser(query) {
+        const { limit } = query;
+        return await this.db.list(process.env.USER_TABLE, limit);
     }
 };
 UserService = __decorate([

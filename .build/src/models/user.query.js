@@ -14,7 +14,7 @@ const class_validator_1 = require("class-validator");
 class ListUserQuery {
 }
 __decorate([
-    (0, class_validator_1.IsNumber)(),
+    (0, class_validator_1.IsString)(),
     (0, class_validator_1.IsOptional)(),
     __metadata("design:type", Number)
 ], ListUserQuery.prototype, "limit", void 0);
@@ -24,4 +24,4 @@ __decorate([
     __metadata("design:type", String)
 ], ListUserQuery.prototype, "next", void 0);
 exports.ListUserQuery = ListUserQuery;
-//# sourceMappingURL=statisticals.query.js.map
+//# sourceMappingURL=user.query.js.map

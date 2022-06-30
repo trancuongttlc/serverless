@@ -2,7 +2,7 @@ import serverless from "serverless-http";
 import express from "express";
 import { json, urlencoded } from "body-parser";
 import cors from "cors";
-import 'reflect-metadata';
+import "reflect-metadata";
 import * as controllers from "./controllers";
 
 const routes = Object.values(controllers);

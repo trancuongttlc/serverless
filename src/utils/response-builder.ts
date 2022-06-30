@@ -1,6 +1,6 @@
-import { getMessage, ResponseCodeEnum } from '../enums/response-code.enum';
-import { ResponseTypeEnum } from '../enums/response-type.enum';
-import { ResponsePayload } from '../models/response-payload';
+import { getMessage, ResponseCodeEnum } from "../enums/response-code.enum";
+import { ResponseTypeEnum } from "../enums/response-type.enum";
+import { ResponsePayload } from "../models/response-payload";
 
 export class ResponseBuilder<T> {
   private payload: ResponsePayload<T> = {

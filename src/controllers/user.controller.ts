@@ -1,8 +1,8 @@
 import { Router, Request, Response } from "express";
-import { Container } from 'typedi';
-import { UserService } from '../services/user.service';
-import { validateMiddleware } from '../middleware/validate.middleware';
-import { ListUserQuery } from '../models/statisticals.query'
+import { Container } from "typedi";
+import { UserService } from "../services/user.service";
+import { validateMiddleware } from "../middleware/validate.middleware";
+import { ListUserQuery } from "../models/user.query";
 
 import { ResponseBuilder } from "../utils/response-builder";
 
@@ -17,14 +17,10 @@ UserRoute.get(
   validateMiddleware({
     query: ListUserQuery,
   }),
-  async (_req: Request, res: Response): Promise<void> => {
-    const userService = Container.get<UserService>(
-      UserService,
-    );
-    const result = await userService.getListUser();
-    res.send(
-      new ResponseBuilder<any>(result).build()
-    );
+  async (req: Request, res: Response): Promise<void> => {
+    const userService = Container.get<UserService>(UserService);
+    const result = await userService.getListUser(req.query);
+    res.send(new ResponseBuilder<any>(result).build());
   }
 );
 

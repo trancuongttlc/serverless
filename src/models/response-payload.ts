@@ -1,5 +1,5 @@
-import { ResponseCodeEnum } from '../enums/response-code.enum';
-import { ResponseTypeEnum } from '../enums/response-type.enum';
+import { ResponseCodeEnum } from "../enums/response-code.enum";
+import { ResponseTypeEnum } from "../enums/response-type.enum";
 
 export interface ResponsePayload<T> {
   type: ResponseTypeEnum;

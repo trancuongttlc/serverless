@@ -1,3 +1,3 @@
 export enum APIEnum {
-    GET_LIST_USER = '/users',
+  GET_LIST_USER = "/users",
 }

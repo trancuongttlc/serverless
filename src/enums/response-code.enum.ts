@@ -1,4 +1,4 @@
-import { ErrorMessageEnum } from './error-message.enum';
+import { ErrorMessageEnum } from "./error-message.enum";
 
 export enum ResponseCodeEnum {
   NOT_FOUND = 404,
