@@ -1,14 +1,14 @@
 import {
-  IsString,
   IsOptional,
+  IsNumber,
 } from 'class-validator';
 
 export class ListUserQuery {
-  @IsString()
+  @IsNumber()
   @IsOptional()
   limit: number;
 
-  @IsString()
+  @IsNumber()
   @IsOptional()
-  next: string;
+  next: number;
 }
